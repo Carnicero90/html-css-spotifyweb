@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+button {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
 li {
     list-style-type: none;
 }
@@ -21,11 +27,23 @@ img {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
 /* COMMON */
 
 .flexer {
     display: flex;
     flex-wrap: wrap;
+}
+
+.flexer.between {
+    justify-content: space-between;
+}
+
+.flexer.center-cross {
+    align-items: center;
 }
 
 /* END COMMON */
@@ -81,4 +99,55 @@ body {
 
 .most_popular .cover-container img {
     border-radius: 50%;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #282828;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* TEST */
+    height: 80px;
+}
+
+.song-length {
+    border-radius: 15px;
+    background-color: #5a5a5a;
+    /* TEST */
+    width: 100px;
+    height: 10px;
+}
+
+.progress-status {
+    border-radius: 15px;
+    height: 100%;
+    width: 40%;
+    background-color: #c1c1c1;
+}
+
+.pointer {
+    background: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: relative;
+    top: -2.5px;
+    display: none;
+    /* vorrei evitare possibilmente di usare un qualche position per piazzarlo */
+}
+
+.song-length:hover .progress-status {
+    background-color: greenyellow;
+}
+
+.song-length:hover .pointer {
+    display: inline-block;
+}
+
+.side-content .song-length {
+    display: inline-block;
 }
