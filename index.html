@@ -9,6 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/my_frame.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
 </head>
@@ -23,14 +24,16 @@
     <div id="app-wrapper">
         <main>
             <nav>
-                <div class="logo">
+                <div class="logo xs-hidden">
                     <img src="img/logo.svg" alt="">
-
+                </div>
+                <div class="logo-xs xs-visible">
+                    <img src="img/logo-small.svg" alt="">
                 </div>
                 <ul class="navigation">
-                    <li><img src="img/home.svg" alt=""><a href="">Home</a></li>
-                    <li><img src="img/search.svg" alt=""><a href="">Cerca</a></li>
-                    <li><img src="img/libreria.svg" alt=""><a href="">La tua libreria</a></li>
+                    <li><a href=""><img src="img/home.svg" alt=""> <span class="xs-hidden">Home</span></a></li>
+                    <li><a href=""><img src="img/search.svg" alt=""><span class="xs-hidden">Cerca</span></a></li>
+                    <li><a href=""><img src="img/libreria.svg" alt=""><span class="xs-hidden">La tua libreria</span></a></li>
                 </ul>
             </nav>
             <div class="main-content">
@@ -57,7 +60,7 @@
                     <h2>Recently played</h2>
                     <div class=" flexer text-center">
                         <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
-                        <div class="recent-playlist">
+                        <div class="recent-playlist flexer col">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -73,7 +76,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist">
+                        <div class="recent-playlist  flexer col">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -89,7 +92,7 @@
                                 <p>Kyle Dixon & Michael Stein</p>
                             </div>
                         </div>
-                        <div class="recent-playlist">
+                        <div class="recent-playlist  flexer col">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -105,7 +108,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist">
+                        <div class="recent-playlist  flexer col">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -121,7 +124,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist">
+                        <div class="recent-playlist  flexer col">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -137,7 +140,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist">
+                        <div class="recent-playlist  flexer col">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">

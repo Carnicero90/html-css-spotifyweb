@@ -1,0 +1,72 @@
+/* RESETS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+/* CLASSES */
+
+/* Classes>flow */
+
+.floater {
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flexer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexer.col {
+    flex-direction: column;
+}
+
+.flexer.between {
+    justify-content: space-between;
+}
+
+.flexer.center-cross {
+    align-items: center;
+}
+
+/* Classes>text */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+/* Classes>lists */
+
+.list-inline li {
+    display: inline-block;
+}

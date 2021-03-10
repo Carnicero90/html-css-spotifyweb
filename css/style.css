@@ -1,68 +1,15 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.xs-visible {
+    display: none;
 }
 
-button {
-    color: inherit;
-    background-color: transparent;
-    border: none;
-}
 
-li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
+.main-content img {
     width: 100%;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-/* COMMON */
-.floater {
-    float: left;
-}
-
-.flexer {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flexer.between {
-    justify-content: space-between;
-}
-
-.flexer.center-cross {
-    align-items: center;
-}
-
-.list-inline li {
-    display: inline-block;
-}
-
-.upper {
-    text-transform: uppercase;
-}
-
-/* END COMMON */
-
-
 /* TEST */
-.navigation img {
-    width: 20%;
+main>nav img {
+    height: 50px;
     vertical-align: middle;
 }
 
@@ -71,6 +18,8 @@ body {
     background: black;
     color: white;
     font-size: 0.9rem;
+    min-width: 320px;
+
 }
 
 /* END TEST */
@@ -251,6 +200,11 @@ footer .caption {
 
 .side-content .song-length {
     display: inline-block;
+    width: 100px;
+}
+
+.side-content .progress-status {
+    width: 50%;
 }
 
 
@@ -263,5 +217,25 @@ footer .caption {
 @media screen and (max-width: 767px) {
     .recent-playlist {
         width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .xs-hidden {
+        display: none;
+    }
+
+    .xs-visible {
+        display: initial;
+    }
+
+    nav {
+        width: 70px;
+        text-align: center;
+    }
+
+    .main-content,
+    body>header {
+        width: calc(100% - 70px);
     }
 }
