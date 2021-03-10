@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* COMMON */
+
+.flexer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* END COMMON */
+
+
+/* TEST */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: black;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* END TEST */
+
+/* Recents */
+.recent-playlist {
+    width: calc(100% / 6);
+    /* TEST */
+    padding: 15px;
+}
+
+.cover-container {
+    position: relative;
+}
+
+.layover {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 50%;
+    display: none;
+}
+
+.layover-content {
+    transform: translateY(-50%);
+    font-size: 300%;
+}
+
+.cover-container:hover .layover {
+    display: block;
+    cursor: pointer;
+}
+
+.caption h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* most_popular */
+
+.most_popular .cover-container img {
+    border-radius: 50%;
+}
