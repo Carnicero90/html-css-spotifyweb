@@ -39,7 +39,7 @@ body>header {
 
 .big-button {
     border: 1px solid white;
-    padding: 15px;
+    padding: 15px 30px;
     border-radius: 20px;
 }
 
@@ -154,10 +154,6 @@ footer {
     overflow: hidden;
 }
 
-footer .caption {
-    display: inline-block;
-}
-
 .footer .side-content {
     vertical-align: top;
 }
@@ -199,7 +195,6 @@ footer .caption {
 
 
 .side-content .song-length {
-    display: inline-block;
     width: 100px;
 }
 
@@ -237,5 +232,9 @@ footer .caption {
     .main-content,
     body>header {
         width: calc(100% - 70px);
+    }
+
+    .actions {
+        flex-direction: column;
     }
 }

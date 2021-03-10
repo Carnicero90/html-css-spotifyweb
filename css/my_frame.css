@@ -65,8 +65,13 @@ button {
     text-transform: uppercase;
 }
 
-/* Classes>lists */
-
+/* lists */
 .list-inline li {
+    display: inline-block;
+}
+
+/* Classes>display */
+
+.dis-in-block {
     display: inline-block;
 }
