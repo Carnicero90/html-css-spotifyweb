@@ -32,6 +32,9 @@ img {
 }
 
 /* COMMON */
+.floater {
+    float: left;
+}
 
 .flexer {
     display: flex;
@@ -58,6 +61,10 @@ img {
 
 
 /* TEST */
+.navigation img {
+    width: 20%;
+    vertical-align: middle;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -68,19 +75,71 @@ body {
 
 /* END TEST */
 
-/* Main>header */
-/* padding da dare, valutare se creare classe, qua forse è diverso */
-main>header li {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 600;
+body>header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 220px);
+    height: 80px;
+    background-color: #080b12;
+    overflow: hidden;
+    padding: 30px;
+
 }
 
-main>header li:hover {
+.big-button {
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.big-button:hover {
     font-size: 130%;
 }
 
-main>header li.focused::after {
+#app-wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    height: calc(100% - 100px);
+}
+
+nav {
+    float: left;
+    background: #000000;
+    height: 100%;
+    width: 220px;
+}
+
+.main-content {
+    padding-top: 120px;
+    background-color: #141922;
+    float: left;
+    overflow-y: scroll;
+    height: 100%;
+    width: calc(100% - 220px);
+}
+
+.main-content>* {
+    padding-bottom: 40px;
+}
+
+/* Main>header */
+/* padding da dare, valutare se creare classe, qua forse è diverso */
+.main-content>header li {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 400;
+}
+
+.main-content>header li:hover {
+    font-size: 130%;
+}
+
+.main-content>header li.focused::after {
     content: "";
     border-bottom: 3px solid yellowgreen;
     display: block;
@@ -141,18 +200,21 @@ footer img {
 footer {
     background-color: #282828;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     /* TEST */
-    height: 80px;
+    height: 100px;
+    overflow: hidden;
 }
 
 footer .caption {
     display: inline-block;
 }
 
+.footer .side-content {
+    vertical-align: top;
+}
+
 .song-length {
+    vertical-align: middle;
     border-radius: 15px;
     background-color: #5a5a5a;
     /* TEST */
@@ -186,6 +248,20 @@ footer .caption {
     display: inline-block;
 }
 
+
 .side-content .song-length {
     display: inline-block;
+}
+
+
+@media screen and (max-width: 991px) {
+    .recent-playlist {
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .recent-playlist {
+        width: calc(100% / 2);
+    }
 }
