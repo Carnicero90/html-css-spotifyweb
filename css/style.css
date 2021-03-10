@@ -46,6 +46,14 @@ img {
     align-items: center;
 }
 
+.list-inline li {
+    display: inline-block;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
 /* END COMMON */
 
 
@@ -59,6 +67,28 @@ body {
 }
 
 /* END TEST */
+
+/* Main>header */
+/* padding da dare, valutare se creare classe, qua forse è diverso */
+main>header li {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+main>header li:hover {
+    font-size: 130%;
+}
+
+main>header li.focused::after {
+    content: "";
+    border-bottom: 3px solid yellowgreen;
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+
 
 /* Recents */
 .recent-playlist {
@@ -104,6 +134,10 @@ body {
 
 /* FOOTER */
 
+footer img {
+    width: 40px;
+}
+
 footer {
     background-color: #282828;
     color: white;
@@ -114,11 +148,15 @@ footer {
     height: 80px;
 }
 
+footer .caption {
+    display: inline-block;
+}
+
 .song-length {
     border-radius: 15px;
     background-color: #5a5a5a;
     /* TEST */
-    width: 100px;
+    width: 200px;
     height: 10px;
 }
 
@@ -131,11 +169,11 @@ footer {
 
 .pointer {
     background: white;
-    height: 15px;
+    height: 150%;
     width: 15px;
     border-radius: 50%;
     position: relative;
-    top: -2.5px;
+    top: -25%;
     display: none;
     /* vorrei evitare possibilmente di usare un qualche position per piazzarlo */
 }
