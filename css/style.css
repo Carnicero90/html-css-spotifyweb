@@ -13,13 +13,22 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #a3a3a3;
     font-size: 0.9rem;
-    min-width: 320px
+    min-width: 320px;
+    overflow: hidden;
 }
 
 h2,
 h3 {
     color: white;
+    font-weight: 800;
+    padding-bottom: 15px;
 }
+
+p {
+    padding-bottom: 10px;
+}
+
+
 
 .lr-padder {
     padding-left: 15px;
@@ -44,7 +53,20 @@ nav {
 
 nav .focused {
     color: white;
+    position: relative;
 }
+
+nav .focused::before {
+    content: "";
+    border-right: 4px solid #adff2f;
+    height: 2.6em;
+    width: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: -15px;
+}
+
 
 nav img {
     height: 2rem;
@@ -137,13 +159,21 @@ main {
     padding-top: 120px;
     background-color: #141922;
     float: left;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 100%;
     width: calc(100% - 220px);
 }
 
 .main-content>* {
     padding-bottom: 40px;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+h2~p {
+    padding-bottom: 15px;
 }
 
 /* Main>header */
@@ -198,11 +228,9 @@ main {
 /* FOOTER */
 
 footer {
-    font-size: 80%;
+    font-size: 65%;
     background-color: #282828;
-    /* color: white; */
     height: 100px;
-    overflow: hidden;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -210,7 +238,8 @@ footer {
 /* common */
 
 .actions,
-.song-player {
+.song-player,
+h4 {
     color: white;
 }
 
@@ -234,7 +263,6 @@ footer .cover-container img {
     padding-bottom: 10px;
     vertical-align: middle;
     font-size: 130%;
-
 }
 
 .player-buttons .fa-play-circle {
@@ -252,14 +280,14 @@ footer .cover-container img {
     border-radius: 15px;
     background-color: #5a5a5a;
     /* TEST */
-    width: 50%;
+    width: 32%;
     height: 0.5rem;
 }
 
 .progress-status {
     border-radius: 15px;
     height: 100%;
-    width: 40%;
+    width: 30%;
     background-color: #c1c1c1;
 }
 
@@ -333,4 +361,9 @@ footer i {
     .user {
         border-top: 1px solid grey;
     }
+}
+
+
+.song-player {
+    min-width: 40%;
 }
