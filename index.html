@@ -15,7 +15,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="text-right">
+    <header class=" fixed-header text-right">
         <a href="" class="big-button big-hover upper">effettua l'upgrade</a>
     </header>
     <!-- END HEADER -->
@@ -26,8 +26,8 @@
             <nav class="flexer col lr-padder">
                 <!-- Logo-container -->
                 <div class="logo-container">
-                    <img src="img/logo.svg" alt="spotify logo" class="xs-hidden">
-                    <img src="img/logo-small.svg" alt="spotify logo" class="xs-visible">
+                    <img src="img/logo.svg" alt="spotify logo" class="xs-hidden logo">
+                    <img src="img/logo-small.svg" alt="spotify logo" class="xs-visible logo-small">
                 </div>
                 <!-- End Logo-container -->
 
@@ -55,24 +55,22 @@
                 <!-- End navigation -->
 
                 <!-- Playlist -->
-                <div class="playlist">
-                    <div class="xs-hidden">
+                <div class="playlist-container">
+                    <div class=" playlist xs-hidden">
                         <h3 class="upper">Playlist</h3>
                         <div class="create-playlist">
                             <i class="fas fa-plus"></i>
-                            <span>Crea playlist</span>
+                            <a href="#">Crea playlist</a>
                         </div>
-                        <div class="playlist-list">
-                            <ul>
-                                <li><a href="">Nome Playlist</a></li>
-                                <li><a href="">Nome Playlist</a></li>
-                                <li><a href="">Nome Playlist</a></li>
-                                <li><a href="">Nome Playlist</a></li>
-                                <li><a href="">Nome Playlist</a></li>
-                                <li><a href="">Nome Playlist</a></li>
-                                <li><a href="">Nome Playlist</a></li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li><a href="">Nome Playlist</a></li>
+                            <li><a href="">Nome Playlist</a></li>
+                            <li><a href="">Nome Playlist</a></li>
+                            <li><a href="">Nome Playlist</a></li>
+                            <li><a href="">Nome Playlist</a></li>
+                            <li><a href="">Nome Playlist</a></li>
+                            <li><a href="">Nome Playlist</a></li>
+                        </ul>
                     </div>
                 </div>
                 <!-- End Playlist -->
@@ -84,7 +82,7 @@
 
                 <div class="user">
                     <img src="img/profile.svg" alt="user icon" class="user-icon rounded">
-                    <span class="xs-hidden">John Doe</span>
+                    <a href="" class="user-area xs-hidden">John Doe</a>
                 </div>
             </nav>
             <div class="main-content lr-padder">
@@ -292,7 +290,7 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="flexer between center-cross">
+        <footer class="flexer between center-cross lr-padder">
             <div class="side-content flexer center-cross">
                 <div class="cover-container">
                     <img src="img/sinister.jpeg" alt="">
@@ -301,7 +299,7 @@
                     <h4>Sinister</h4>
                     <p>Brano nome</p>
                 </div>
-                <div class="actions text-center">
+                <div class="text-center">
                     <i class="far fa-heart"></i>
                     <i class="far fa-folder"></i>
                 </div>
@@ -337,13 +335,10 @@
                 </div>
 
             </div>
-            <div class="side-content flexer center-cross">
-                <div class="actions">
-                    <a href=""><i class="fas fa-bars"></i></a>
-                    <a href=""><i class="fas fa-desktop"></i></a>
-                    <a href=""><i class="fas fa-volume-up"></i></a>
-                </div>
-
+            <div class="side-content flexer center-cross end">
+                <a href=""><i class="fas fa-bars"></i></a>
+                <a href=""><i class="fas fa-desktop"></i></a>
+                <a href=""><i class="fas fa-volume-up"></i></a>
                 <div class="rounded-bar">
                     <div class="progress-status">
                         <span class="pointer"></span>

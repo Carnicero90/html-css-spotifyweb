@@ -50,6 +50,10 @@ img {
     flex-direction: column;
 }
 
+.flexer.end {
+    justify-content: flex-end;
+}
+
 .flexer.between {
     justify-content: space-between;
 }
@@ -82,3 +86,18 @@ img {
 .rounded {
     border-radius: 50%;
 }
+
+/* APPUNTI TEST */
+
+/* paddings bottom: h2,
+h3 15px 
+p 10px 
+nav .navigation li,
+nav .playlist li,
+.create-playlist,
+.playlist h2 20px
+.user .install 10px
+.main-content>*40px
+h2~p {
+    padding-bottom: 15px;
+} */

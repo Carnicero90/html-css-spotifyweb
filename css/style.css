@@ -4,7 +4,11 @@
 
 /* TEST */
 .song-player .rounded-bar {
-    margin: auto 10px;
+    margin: auto 2%;
+}
+
+nav * {
+    flex-shrink: 0;
 }
 
 
@@ -12,7 +16,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: #a3a3a3;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     min-width: 320px;
     overflow: hidden;
 }
@@ -21,13 +25,18 @@ h2,
 h3 {
     color: white;
     font-weight: 800;
-    padding-bottom: 15px;
 }
 
-p {
+h2,
+h3,
+p,
+.cover-container {
     padding-bottom: 10px;
 }
 
+.big-button {
+    margin-top: 20px;
+}
 
 
 .lr-padder {
@@ -67,33 +76,49 @@ nav .focused::before {
     left: -15px;
 }
 
+.logo-container {
+    height: 80px;
+    padding-top: 15px;
+}
 
-nav img {
-    height: 2rem;
+/* Nav imgs&icons */
+nav img:not(.logo) {
     width: 2rem;
-    margin-right: 0.4rem;
     vertical-align: middle;
 }
 
-.logo-container img {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 80px;
-    width: auto;
+.logo {
+    width: 75%;
 }
 
-nav .navigation li,
-nav .playlist li,
+.logo-small {
+    width: 100%;
+}
+
+.install img {
+    height: 1.3rem;
+}
+
+.user-icon {
+    background-color: #808080;
+    height: 2rem;
+}
+
+nav li,
 .create-playlist,
 .playlist h2 {
     padding-bottom: 20px;
 }
 
-.playlist {
+.playlist-container {
     flex-grow: 1;
-    overflow-y: auto;
-    min-height: 200px;
 
+}
+
+.playlist ul {
+    overflow: auto;
+    /* test */
+    max-height: 30vh;
 }
 
 .playlist .fa-plus {
@@ -104,20 +129,16 @@ nav .playlist li,
     margin-right: 0.4rem;
 }
 
-.user-icon {
-    background-color: #808080;
-    width: 2rem;
-
-}
-
-.install img {
-    height: 70%;
-}
-
 .user,
 .install {
+    overflow: hidden;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.user-area {
+    color: white;
+    font-weight: 800;
 }
 
 
@@ -132,6 +153,7 @@ body>header {
     width: calc(100% - 220px);
     height: 80px;
     background-color: #080b12;
+    opacity: 0.8;
     padding: 30px;
     color: white;
 }
@@ -140,6 +162,7 @@ body>header {
     border: 1px solid;
     padding: 15px 30px;
     border-radius: 20px;
+    font-weight: 800;
 }
 
 /* END FIXED */
@@ -156,7 +179,7 @@ main {
 }
 
 .main-content {
-    padding-top: 120px;
+    padding-top: 90px;
     background-color: #141922;
     float: left;
     overflow-y: auto;
@@ -166,14 +189,6 @@ main {
 
 .main-content>* {
     padding-bottom: 40px;
-}
-
-h2 {
-    padding-bottom: 15px;
-}
-
-h2~p {
-    padding-bottom: 15px;
 }
 
 /* Main>header */
@@ -220,15 +235,10 @@ h2~p {
     cursor: pointer;
 }
 
-.caption h3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 /* FOOTER */
 
 footer {
-    font-size: 65%;
+    font-size: 85%;
     background-color: #282828;
     height: 100px;
     padding-left: 5px;
@@ -237,7 +247,6 @@ footer {
 
 /* common */
 
-.actions,
 .song-player,
 h4 {
     color: white;
@@ -249,39 +258,39 @@ footer [class*="content"] * {
 
 footer .song-player {
     flex-grow: 1;
+
+}
+
+.side-content {
+    width: 30%;
 }
 
 /* Left-col */
 footer .cover-container img {
     width: 70px;
-    padding-left: 8px;
     padding-right: 8px;
 }
 
 /* Center-col */
+
 .player-buttons * {
-    padding-bottom: 10px;
     vertical-align: middle;
     font-size: 130%;
 }
 
 .player-buttons .fa-play-circle {
-    font-size: 2em;
+    font-size: 2.2rem;
 }
 
 /* status-bar */
-.middle-content {
-    flex-grow: 1;
-}
-
 
 .rounded-bar {
     display: inline-block;
     border-radius: 15px;
     background-color: #5a5a5a;
     /* TEST */
-    width: 32%;
-    height: 0.5rem;
+    width: 50%;
+    height: 0.4rem;
 }
 
 .progress-status {
@@ -297,12 +306,13 @@ footer .cover-container img {
 
 .pointer {
     background: white;
-    height: 1rem;
-    width: 1rem;
+    height: 0.8rem;
+    width: 0.8rem;
     border-radius: 50%;
     position: relative;
     top: -50%;
-    left: 90%;
+    left: 100%;
+    transform: translateX(-50%);
     display: none;
 }
 
@@ -311,7 +321,7 @@ footer .cover-container img {
 }
 
 .side-content .rounded-bar {
-    width: 100px;
+    width: 150px;
 }
 
 .side-content .progress-status {
@@ -347,12 +357,13 @@ footer i {
     }
 
     nav {
-        width: 70px;
+        width: 60px;
+        align-items: center;
     }
 
     .main-content,
     body>header {
-        width: calc(100% - 70px);
+        width: calc(100% - 60px);
     }
 
 }
@@ -364,6 +375,4 @@ footer i {
 }
 
 
-.song-player {
-    min-width: 40%;
-}
+/* TEST */
