@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/my_frame.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
@@ -23,20 +22,47 @@
 
     <div id="app-wrapper">
         <main>
-            <nav>
+            <nav class="flexer col lr-padder">
                 <div class="logo xs-hidden">
-                    <img src="img/logo.svg" alt="">
+                    <img src="img/logo.svg" alt="spotify logo">
                 </div>
-                <div class="logo-xs xs-visible">
-                    <img src="img/logo-small.svg" alt="">
+                <div class="logo-small xs-visible">
+                    <img src="img/logo-small.svg" alt="spotify logo">
                 </div>
                 <ul class="navigation">
-                    <li><a href=""><img src="img/home.svg" alt=""> <span class="xs-hidden">Home</span></a></li>
-                    <li><a href=""><img src="img/search.svg" alt=""><span class="xs-hidden">Cerca</span></a></li>
-                    <li><a href=""><img src="img/libreria.svg" alt=""><span class="xs-hidden">La tua libreria</span></a></li>
+                    <li><a href="#"><img src="img/home.svg" alt=""> <span class="xs-hidden">Home</span></a></li>
+                    <li><a href="#"><img src="img/search.svg" alt=""><span class="xs-hidden">Cerca</span></a></li>
+                    <li><a href="#"><img src="img/libreria.svg" alt=""><span class="xs-hidden">La tua libreria</span></a>
+                    </li>
                 </ul>
+                <div class="playlist xs-hidden">
+                    <h2 class="upper">Playlist</h2>
+                    <div>Crea</div>
+                    <ul>
+                        <li><a href="">Crea Playlist</a></li>
+                        <li><a href="">Crea Playlist</a></li>
+                        <li><a href="">Crea Playlist</a></li>
+                        <li><a href="">Crea Playlist</a></li>
+                        <li><a href="">Crea Playlist</a></li>
+                        <li><a href="">Crea Playlist</a></li>
+                        <li><a href="">Crea Playlist</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="install-container">
+                    <div class="install-content">
+                        <img src="img/download.svg" alt="">
+                        <span class="xs-hidden">Installa app</span>
+                    </div>
+                </div>
+
+                <div class="user">
+                    <img src="img/profile.svg" alt="">
+                    <span class="xs-hidden">John Doe</span>
+                </div>
             </nav>
-            <div class="main-content">
+            <div class="main-content lr-padder">
 
                 <!-- Main>header -->
                 <header class="text-center">
@@ -58,9 +84,9 @@
                 <!-- Main>Recents -->
                 <section class="recents">
                     <h2>Recently played</h2>
-                    <div class=" flexer text-center">
+                    <div class=" flexer wrap text-center">
                         <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
-                        <div class="recent-playlist flexer col">
+                        <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -76,7 +102,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist  flexer col">
+                        <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -92,7 +118,7 @@
                                 <p>Kyle Dixon & Michael Stein</p>
                             </div>
                         </div>
-                        <div class="recent-playlist  flexer col">
+                        <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -108,7 +134,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist  flexer col">
+                        <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -124,7 +150,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist  flexer col">
+                        <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -140,7 +166,7 @@
                                 <p>Subtitle</p>
                             </div>
                         </div>
-                        <div class="recent-playlist  flexer col">
+                        <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
                                     <div class="layover-content">
@@ -248,82 +274,58 @@
             <div class="side-content flexer center-cross">
                 <div class="cover-container">
                     <img src="img/sinister.jpeg" alt="">
-
                 </div>
-
                 <div class="captions dis-in-block">
                     <h3>Sinister</h3>
                     <p>Brano nome</p>
                 </div>
-                <div class="actions flexer">
+                <div class="actions flexer text-center">
                     <i class="far fa-heart"></i>
                     <i class="far fa-folder"></i>
                 </div>
 
 
             </div>
-            <div class="middle-content  text-center">
+            <div class="middle-content text-center">
                 <div class="player">
-                    <!-- non so manco qua se usare ul -->
-                    <button>
-                        <a href="">
-
-                            <i class="fas fa-random"></i>
-                        </a>
-
-                    </button>
-                    <button>
-                        <a href="">
-
-                            <i class="fas fa-step-backward"></i>
-                        </a>
-
-
-                    </button>
-                    <button>
-                        <a href="">
-
-                            <i class="fas fa-play-circle"></i>
-                        </a>
-
-
-                    </button>
-                    <button>
-                        <a href="">
-
-                            <i class="fas fa-step-forward"></i>
-
-                        </a>
-
-                    </button>
-                    <button>
-                        <a href="">
-                            <i class="fas fa-random"></i>
-                        </a>
-
-                    </button>
-
+                    <a href="">
+                        <i class="fas fa-random"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-step-backward"></i>
+                    </a>
+                    <a href="">
+                        <i class="far fa-play-circle"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-step-forward"></i>
+                    </a>
+                    <a href="">
+                        <i class="fas fa-redo-alt"></i>
+                    </a>
                 </div>
-                <div class="progress-bar flexer between center-cross">
-                    <span>0:25</span>
-                    <div class="song-length">
+                <div class="progress-bar">
+                    <span class="vermid">0:25</span>
+                    <div class="song-length dis-in-block">
                         <div class="progress-status text-right">
                             <span class="pointer"></span>
                         </div>
                     </div>
-                    <span>4:35</span>
+                    <span class="vermid">4:35</span>
 
 
                 </div>
 
             </div>
-            <div class="side-content">
-                <!-- poi valuto se riusare flex pure qua, comodo ma forse esagerato -->
-                <a href=""><i class="fas fa-bars"></i></a>
-                <a href=""><i class="fas fa-desktop"></i></a>
-                <a href=""> <i class="fas fa-volume-up"></i></a>
+            <div class="side-content text-right">
+                <div class="actions dis-in-block">
+                    <a href=""><i class="fas fa-bars"></i></a>
+                    <a href=""><i class="fas fa-desktop"></i></a>
+                    <a href=""> <i class="fas fa-volume-up"></i></a>
+                </div>
+
                 <div class="song-length dis-in-block">
-                    <div class="progress-status text-right">
+                    <div class="progress-status">
                         <span class="pointer"></span>
                     </div>
                 </div>

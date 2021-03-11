@@ -36,6 +36,9 @@ button {
 
 .flexer {
     display: flex;
+}
+
+.flexer.wrap {
     flex-wrap: wrap;
 }
 
@@ -74,4 +77,24 @@ button {
 
 .dis-in-block {
     display: inline-block;
+}
+
+
+
+/* TeST */
+
+.col-4 {
+    width: calc(100% / 3);
+}
+
+.col-6 {
+    width: calc(100% / 2);
+}
+
+.col-3 {
+    width: calc(100% / 4);
+}
+
+.vermid {
+    vertical-align: middle;
 }

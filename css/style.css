@@ -8,13 +8,34 @@
 }
 
 /* TEST */
-main>nav img {
-    height: 50px;
-    vertical-align: middle;
+.middle-content .song-length {
+    margin: auto 10px;
 }
 
+.playlist {
+    overflow-y: auto;
+    min-height: 150px;
+    /* flex-grow: 1; */
+}
+
+nav>* {
+    overflow: hidden;
+}
+
+
+p,
+li {
+    color: #7e7e7e;
+}
+
+.install-container {
+    margin-top: auto;
+}
+
+
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: black;
     color: white;
     font-size: 0.9rem;
@@ -24,6 +45,32 @@ body {
 
 /* END TEST */
 
+/* COMMON */
+.lr-padder {
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* NAV */
+nav img {
+    height: 2rem;
+    padding-right: 0.4rem;
+    vertical-align: middle;
+}
+
+nav [class*="logo"] img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 80px;
+}
+
+nav .navigation li,
+nav .playlist li {
+    padding-bottom: 20px;
+}
+
+/* END NAV */
 body>header {
     z-index: 1;
     position: fixed;
@@ -32,7 +79,6 @@ body>header {
     width: calc(100% - 220px);
     height: 80px;
     background-color: #080b12;
-    overflow: hidden;
     padding: 30px;
 
 }
@@ -61,6 +107,7 @@ nav {
     background: #000000;
     height: 100%;
     width: 220px;
+    overflow: hidden;
 }
 
 .main-content {
@@ -101,8 +148,7 @@ nav {
 /* Recents */
 .recent-playlist {
     width: calc(100% / 6);
-    /* TEST */
-    padding: 15px;
+    padding-right: 15px;
 }
 
 .cover-container {
@@ -135,36 +181,57 @@ nav {
 
 /* most_popular */
 
-.most_popular .cover-container img {
+.most_popular .cover-container img,
+.most_popular .cover-container .layover {
     border-radius: 50%;
+
 }
 
 
 /* FOOTER */
 
-footer img {
-    width: 40px;
-}
-
 footer {
     background-color: #282828;
     color: white;
-    /* TEST */
     height: 100px;
     overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
 }
 
-.footer .side-content {
-    vertical-align: top;
+/* common */
+
+footer [class*="content"] * {
+    vertical-align: middle;
 }
+
+/* Left-col */
+footer .cover-container img {
+    width: 70px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Center-col */
+.player * {
+    padding-bottom: 10px;
+    vertical-align: middle;
+
+}
+
+.player .fa-play-circle {
+    font-size: 2em;
+}
+
+/* status-bar */
 
 .song-length {
-    vertical-align: middle;
     border-radius: 15px;
     background-color: #5a5a5a;
     /* TEST */
-    width: 200px;
-    height: 10px;
+    width: 300px;
+    height: 0.5rem;
 }
 
 .progress-status {
@@ -174,24 +241,32 @@ footer {
     background-color: #c1c1c1;
 }
 
-.pointer {
-    background: white;
-    height: 150%;
-    width: 15px;
-    border-radius: 50%;
-    position: relative;
-    top: -25%;
-    display: none;
-    /* vorrei evitare possibilmente di usare un qualche position per piazzarlo */
-}
-
 .song-length:hover .progress-status {
     background-color: greenyellow;
 }
 
-.song-length:hover .pointer {
-    display: inline-block;
+.pointer {
+    background: white;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: relative;
+    top: -50%;
+    left: 90%;
+    display: none;
 }
+
+.song-length:hover .pointer {
+    display: block;
+}
+
+.middle-content {
+    flex-shrink: 1;
+}
+
+
+
+
 
 
 .side-content .song-length {
@@ -200,6 +275,12 @@ footer {
 
 .side-content .progress-status {
     width: 50%;
+}
+
+footer i {
+    font-size: 130%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -226,8 +307,10 @@ footer {
 
     nav {
         width: 70px;
-        text-align: center;
+        align-items: center;
     }
+
+    nav img {}
 
     .main-content,
     body>header {
@@ -236,5 +319,16 @@ footer {
 
     .actions {
         flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width: 577px) {
+    .user::before {
+        content: '';
+        border-bottom: 1px solid grey;
+        width: 100%;
+        margin: auto;
+        display: block;
     }
 }
