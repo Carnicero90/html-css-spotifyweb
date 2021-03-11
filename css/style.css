@@ -29,9 +29,12 @@ h3 {
 
 h2,
 h3,
-p,
-.cover-container {
+p {
     padding-bottom: 10px;
+}
+
+.caption {
+    padding-top: 10px;
 }
 
 .big-button {
@@ -213,6 +216,13 @@ main {
 
 .cover-container {
     position: relative;
+    overflow: hidden;
+
+
+}
+
+.cover-container img {
+    display: block;
 }
 
 .layover {
@@ -271,6 +281,10 @@ footer .cover-container img {
     padding-right: 8px;
 }
 
+footer .captions {
+    padding-right: 10%;
+}
+
 /* Center-col */
 
 .player-buttons * {
@@ -288,7 +302,6 @@ footer .cover-container img {
     display: inline-block;
     border-radius: 15px;
     background-color: #5a5a5a;
-    /* TEST */
     width: 50%;
     height: 0.4rem;
 }
@@ -373,6 +386,3 @@ footer i {
         border-top: 1px solid grey;
     }
 }
-
-
-/* TEST */
