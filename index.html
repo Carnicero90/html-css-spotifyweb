@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/my_frame.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
@@ -22,43 +22,68 @@
 
     <div id="app-wrapper">
         <main>
+            <!-- Navbar -->
             <nav class="flexer col lr-padder">
-                <div class="logo xs-hidden">
-                    <img src="img/logo.svg" alt="spotify logo">
+                <!-- Logo-container -->
+                <div class="logo-container">
+                    <img src="img/logo.svg" alt="spotify logo" class="xs-hidden">
+                    <img src="img/logo-small.svg" alt="spotify logo" class="xs-visible">
                 </div>
-                <div class="logo-small xs-visible">
-                    <img src="img/logo-small.svg" alt="spotify logo">
-                </div>
+                <!-- End Logo-container -->
+
+                <!-- Navigation -->
                 <ul class="navigation">
-                    <li><a href="#"><img src="img/home.svg" alt=""> <span class="xs-hidden">Home</span></a></li>
-                    <li><a href="#"><img src="img/search.svg" alt=""><span class="xs-hidden">Cerca</span></a></li>
-                    <li><a href="#"><img src="img/libreria.svg" alt=""><span class="xs-hidden">La tua libreria</span></a>
+                    <li class="focused">
+                        <a href="#">
+                            <img src="img/home.svg" alt="home">
+                            <span class="xs-hidden">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/search.svg" alt="search">
+                            <span class="xs-hidden">Cerca</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/libreria.svg" alt="library">
+                            <span class="xs-hidden">La tua libreria</span>
+                        </a>
                     </li>
                 </ul>
-                <div class="playlist xs-hidden">
-                    <h2 class="upper">Playlist</h2>
-                    <div>Crea</div>
-                    <ul>
-                        <li><a href="">Crea Playlist</a></li>
-                        <li><a href="">Crea Playlist</a></li>
-                        <li><a href="">Crea Playlist</a></li>
-                        <li><a href="">Crea Playlist</a></li>
-                        <li><a href="">Crea Playlist</a></li>
-                        <li><a href="">Crea Playlist</a></li>
-                        <li><a href="">Crea Playlist</a></li>
-                    </ul>
+                <!-- End navigation -->
 
-                </div>
-
-                <div class="install-container">
-                    <div class="install-content">
-                        <img src="img/download.svg" alt="">
-                        <span class="xs-hidden">Installa app</span>
+                <!-- Playlist -->
+                <div class="playlist">
+                    <div class="xs-hidden">
+                        <h2 class="upper">Playlist</h2>
+                        <div class="create-playlist">
+                            <i class="fas fa-plus"></i>
+                            <span>Crea playlist</span>
+                        </div>
+                        <div class="playlist-list">
+                            <ul>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                                <li><a href="">Nome Playlist</a></li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+                <!-- End Playlist -->
+
+                <div class="install">
+                    <img src="img/download.svg" alt="">
+                    <span class="xs-hidden">Installa app</span>
                 </div>
 
                 <div class="user">
-                    <img src="img/profile.svg" alt="">
+                    <img src="img/profile.svg" alt="user icon" class="user-icon rounded">
                     <span class="xs-hidden">John Doe</span>
                 </div>
             </nav>
@@ -77,9 +102,6 @@
 
                 </header>
                 <!-- END Main>header -->
-
-
-
 
                 <!-- Main>Recents -->
                 <section class="recents">
@@ -236,14 +258,14 @@
                         <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
                         <div class="recent-playlist">
                             <div class="cover-container">
-                                <div class="layover">
+                                <div class="layover rounded">
                                     <div class="layover-content">
                                         <a href="">
                                             <i class="far fa-play-circle"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <img src="img/youg.jpeg" alt="Lana Del Rey">
+                                <img src="img/youg.jpeg" alt="Lana Del Rey" class="rounded">
                             </div>
                             <div class="caption">
                                 <h3>Lana Del Rey</h3>
@@ -251,14 +273,14 @@
                         </div>
                         <div class="recent-playlist">
                             <div class="cover-container">
-                                <div class="layover">
+                                <div class="layover rounded">
                                     <div class="layover-content">
                                         <a href="">
                                             <i class="far fa-play-circle"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                <img src="img/einaudi.jpeg" alt="Ludovico Einaudi" class="rounded">
                             </div>
                             <div class="caption">
                                 <h3>Ludovico Einaudi</h3>

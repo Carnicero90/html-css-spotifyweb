@@ -20,6 +20,10 @@ button {
     border: none;
 }
 
+img {
+    width: 100%;
+}
+
 /* CLASSES */
 
 /* Classes>flow */
@@ -97,4 +101,8 @@ button {
 
 .vermid {
     vertical-align: middle;
+}
+
+.rounded {
+    border-radius: 50%;
 }
