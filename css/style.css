@@ -2,27 +2,30 @@
     display: none;
 }
 
-/* TEST */
-.song-player .rounded-bar {
-    margin: auto 2%;
-}
-
-nav * {
-    flex-shrink: 0;
-}
-
-
 /* COMMON */
 body {
     font-family: 'Montserrat', sans-serif;
+    font-stretch: semi-condensed;
+    font-weight: 600;
     color: #a3a3a3;
     font-size: 0.8rem;
-    min-width: 320px;
-    overflow: hidden;
+    /* min-width: 320px; */
+}
+
+/* COMMON text-color */
+a:hover,
+nav .focused,
+body>header,
+.layover-content,
+.song-player {
+    color: white;
 }
 
 h2,
-h3 {
+h3,
+h4,
+.user-area,
+.big-button {
     color: white;
     font-weight: 800;
 }
@@ -45,7 +48,6 @@ p {
 .lr-padder {
     padding-left: 15px;
     padding-right: 15px;
-
 }
 
 .big-button:hover,
@@ -64,7 +66,6 @@ nav {
 }
 
 nav .focused {
-    color: white;
     position: relative;
 }
 
@@ -115,7 +116,6 @@ nav li,
 
 .playlist-container {
     flex-grow: 1;
-
 }
 
 .playlist ul {
@@ -139,12 +139,6 @@ nav li,
     padding-bottom: 10px;
 }
 
-.user-area {
-    color: white;
-    font-weight: 800;
-}
-
-
 /* END NAV */
 
 /* FIXED */
@@ -152,26 +146,25 @@ body>header {
     z-index: 1;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 220px;
+    /* right: 0; */
+    /* a dargli direttamente right:  0 ho notato comportamenti strani */
     width: calc(100% - 220px);
     height: 80px;
     background-color: #080b12;
     opacity: 0.8;
-    padding: 30px;
-    color: white;
+    padding: 30px 25px;
 }
 
 .big-button {
     border: 1px solid;
-    padding: 15px 30px;
+    padding: 15px 8%;
     border-radius: 20px;
-    font-weight: 800;
 }
 
 /* END FIXED */
 
 /* MAIN */
-
 #app-wrapper {
     height: 100vh;
     width: 100%;
@@ -197,7 +190,6 @@ main {
 /* Main>header */
 .main-content>header li {
     padding: 10px 10px;
-    font-weight: 600;
 }
 
 .main-content>header li.focused::after {
@@ -214,11 +206,14 @@ main {
     padding-right: 15px;
 }
 
-.cover-container {
+/* devo resettare padding right di 15px a sto giro */
+.recents {
+    margin-right: -15px;
+}
+
+.main-content .cover-container {
     position: relative;
     overflow: hidden;
-
-
 }
 
 .cover-container img {
@@ -237,7 +232,6 @@ main {
 .layover-content {
     transform: translateY(-50%);
     font-size: 300%;
-    color: white;
 }
 
 .cover-container:hover .layover {
@@ -248,18 +242,10 @@ main {
 /* FOOTER */
 
 footer {
-    font-size: 85%;
     background-color: #282828;
     height: 100px;
     padding-left: 5px;
     padding-right: 5px;
-}
-
-/* common */
-
-.song-player,
-h4 {
-    color: white;
 }
 
 footer [class*="content"] * {
@@ -268,7 +254,6 @@ footer [class*="content"] * {
 
 footer .song-player {
     flex-grow: 1;
-
 }
 
 .side-content {
@@ -276,7 +261,7 @@ footer .song-player {
 }
 
 /* Left-col */
-footer .cover-container img {
+footer img {
     width: 70px;
     padding-right: 8px;
 }
@@ -289,7 +274,7 @@ footer .captions {
 
 .player-buttons * {
     vertical-align: middle;
-    font-size: 130%;
+    font-size: 110%;
 }
 
 .player-buttons .fa-play-circle {
@@ -297,6 +282,10 @@ footer .captions {
 }
 
 /* status-bar */
+
+.song-player .rounded-bar {
+    margin: auto 2%;
+}
 
 .rounded-bar {
     display: inline-block;
@@ -342,24 +331,28 @@ footer .captions {
 }
 
 footer i {
-    font-size: 130%;
     padding-left: 5px;
     padding-right: 5px;
 }
 
+/* QUERIES
+   ======================================================= */
 
+/* +++ LG +++ */
 @media screen and (max-width: 991px) {
     .recent-playlist {
         width: calc(100% / 4);
     }
 }
 
+/* +++ MD +++ */
 @media screen and (max-width: 767px) {
     .recent-playlist {
         width: calc(100% / 2);
     }
 }
 
+/* +++ S +++ */
 @media screen and (max-width: 576px) {
     .xs-hidden {
         display: none;
@@ -376,13 +369,85 @@ footer i {
 
     .main-content,
     body>header {
+        left: 60px;
         width: calc(100% - 60px);
     }
-
 }
 
+/* +++ XS +++ */
 @media screen and (min-width: 577px) {
     .user {
         border-top: 1px solid grey;
+    }
+}
+
+/* A PARTE, BONUS, ROBE MIE */
+@media screen and (max-width: 420px) {
+    body {
+        overflow-y: hidden;
+    }
+
+    body>header {
+        padding: 35px 0;
+    }
+
+    .big-button {
+        border: none;
+        position: relative;
+    }
+
+    .big-button::after {
+        content: "x";
+        font-size: 60%;
+        position: absolute;
+        top: 0;
+        right: 4px;
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+
+    .list-inline li {
+        display: list-item;
+    }
+
+    .main-content {
+        text-align: center;
+    }
+
+    .recent-playlist {
+        width: 100%;
+        margin: auto;
+    }
+
+    .side-content {
+        position: absolute;
+        bottom: -1000px;
+        flex-direction: row;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .side-content .captions * {
+        display: inline;
+    }
+
+    footer p {
+        padding-bottom: 0;
+        padding-left: 5px;
+    }
+
+    .side-content .captions {
+        display: block;
+        position: absolute;
+        top: -1030px;
+        width: 200px;
+        left: 50%;
     }
 }

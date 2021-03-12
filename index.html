@@ -104,7 +104,7 @@
                 <!-- Main>Recents -->
                 <section class="recents">
                     <h2>Recently played</h2>
-                    <div class=" flexer wrap text-center">
+                    <div class="flexer wrap text-center">
                         <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
                         <div class="recent-playlist">
                             <div class="cover-container">
@@ -209,11 +209,10 @@
 
                 <!-- Main>created -->
 
-                <section class="recents">
+                <section class="created">
                     <h2>Creato per John Doe</h2>
                     <p>Più ascolti, più accurati saranno i suggerimenti</p>
-                    <div class=" flexer text-center">
-                        <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
+                    <div class="flexer wrap text-center">
                         <div class="recent-playlist">
                             <div class="cover-container">
                                 <div class="layover">
@@ -252,8 +251,7 @@
                 <section class="most_popular">
                     <h2>Artisti più popolari</h2>
                     <p>Più ascolti, più accurati saranno i suggerimenti</p>
-                    <div class=" flexer text-center">
-                        <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
+                    <div class="flexer wrap text-center">
                         <div class="recent-playlist">
                             <div class="cover-container rounded">
                                 <div class="layover">
@@ -286,27 +284,31 @@
                         </div>
                     </div>
                 </section>
+                <!-- END Main>Most_Popular -->
+
             </div>
         </main>
 
         <!-- FOOTER -->
+
         <footer class="flexer between center-cross lr-padder">
+            <!-- FOOTER==>LEFT_COL -->
             <div class="side-content flexer center-cross">
-                <div class="cover-container">
-                    <img src="img/sinister.jpeg" alt="">
-                </div>
+                <img src="img/sinister.jpeg" alt="sinister cover">
                 <div class="captions">
                     <h4>Sinister</h4>
                     <p>Brano nome</p>
                 </div>
-                <div class="text-center">
+                <div>
                     <i class="far fa-heart"></i>
                     <i class="far fa-folder"></i>
                 </div>
-
-
             </div>
+            <!-- END FOOTER==>LEFT_COL -->
+
+            <!-- FOOTER==>PLAYER -->
             <div class="song-player text-center">
+                <!-- BUTTONS -->
                 <div class="player-buttons">
                     <a href="#">
                         <i class="fas fa-random"></i>
@@ -324,6 +326,9 @@
                         <i class="fas fa-redo-alt"></i>
                     </a>
                 </div>
+                <!-- END BUTTONS -->
+
+                <!-- BAR -->
                 <div class="song-bar">
                     <span>0:25</span>
                     <div class="rounded-bar">
@@ -333,8 +338,10 @@
                     </div>
                     <span>4:35</span>
                 </div>
-
+                <!-- END BAR -->
             </div>
+            <!-- END FOOTER==>PLAYER -->
+
             <div class="side-content flexer center-cross end">
                 <a href=""><i class="fas fa-bars"></i></a>
                 <a href=""><i class="fas fa-desktop"></i></a>
@@ -349,11 +356,6 @@
         </footer>
         <!-- END FOOTER -->
     </div>
-
-    <!-- END Main>Most_Popular -->
-
-
-
 </body>
 
 </html>
