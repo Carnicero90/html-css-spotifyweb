@@ -15,347 +15,340 @@
 
 <body>
     <!-- HEADER -->
-    <header class=" fixed-header text-right">
-        <a href="" class="big-button big-hover upper">effettua l'upgrade</a>
+    <header class="fixed-header text-right">
+        <a href="#" class="big-button big-hover upper">effettua l'upgrade</a>
     </header>
     <!-- END HEADER -->
 
-    <div id="app-wrapper">
-        <main>
-            <!-- Navbar -->
-            <nav class="flexer col lr-padder">
-                <!-- Logo-container -->
-                <div class="logo-container">
-                    <img src="img/logo.svg" alt="spotify logo" class="xs-hidden logo">
-                    <img src="img/logo-small.svg" alt="spotify logo" class="xs-visible logo-small">
-                </div>
-                <!-- End Logo-container -->
+    <main class="flexer">
+        <nav class="lr-padder flexer col">
 
-                <!-- Navigation -->
-                <ul class="navigation">
-                    <li class="focused">
-                        <a href="#">
-                            <img src="img/home.svg" alt="home">
-                            <span class="xs-hidden">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/search.svg" alt="search">
-                            <span class="xs-hidden">Cerca</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/libreria.svg" alt="library">
-                            <span class="xs-hidden">La tua libreria</span>
-                        </a>
-                    </li>
+            <!-- Logo-container -->
+            <div class="logo-container">
+                <img src="img/logo.svg" alt="spotify logo" class="xs-hidden logo">
+                <img src="img/logo-small.svg" alt="spotify logo" class="xs-visible logo-small">
+            </div>
+            <!-- End Logo-container -->
+
+            <!-- Navigation -->
+            <ul class="navigation">
+                <li class="focused">
+                    <a href="#">
+                        <img src="img/home.svg" alt="home">
+                        <span class="xs-hidden">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/search.svg" alt="search">
+                        <span class="xs-hidden">Cerca</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/libreria.svg" alt="library">
+                        <span class="xs-hidden">La tua libreria</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- End navigation -->
+
+            <!-- Playlist -->
+            <div class="playlist xs-hidden">
+                <h3 class="upper">Playlist</h3>
+                <div class="create-playlist">
+                    <i class="fas fa-plus"></i>
+                    <a href="#">Crea playlist</a>
+                </div>
+            </div>
+            <ul class="playlist-list xs-hidden">
+                <li><a href="">Nome Playlist</a></li>
+                <li><a href="">Nome Playlist</a></li>
+                <li><a href="">Nome Playlist</a></li>
+                <li><a href="">Nome Playlist</a></li>
+                <li><a href="">Nome Playlist</a></li>
+                <li><a href="">Nome Playlist</a></li>
+                <li><a href="">Nome Playlist</a></li>
+            </ul>
+            <!-- End Playlist -->
+
+            <div class="install">
+                <img src="img/download.svg" alt="">
+                <span class="xs-hidden">Installa app</span>
+            </div>
+
+            <div class="user">
+                <img src="img/profile.svg" alt="user icon" class="user-icon rounded">
+                <a href="" class="user-area xs-hidden">John Doe</a>
+            </div>
+        </nav>
+        <div class="main-content lr-padder">
+
+            <!-- Main>header -->
+            <header class="text-center">
+                <ul class="list-inline upper">
+                    <li class="focused"><a href=""></a>In evidenza</li>
+                    <li><a href=""></a>Podcast</li>
+                    <li><a href=""></a>Classifiche</li>
+                    <li><a href=""></a>Generi e Mahmood</li>
+                    <li><a href=""></a>Nuove uscite</li>
+                    <li><a href=""></a>Scopri</li>
                 </ul>
-                <!-- End navigation -->
 
-                <!-- Playlist -->
-                <div class="playlist-container">
-                    <div class=" playlist xs-hidden">
-                        <h3 class="upper">Playlist</h3>
-                        <div class="create-playlist">
-                            <i class="fas fa-plus"></i>
-                            <a href="#">Crea playlist</a>
+            </header>
+            <!-- END Main>header -->
+
+            <!-- Main>Recents -->
+            <section class="recents">
+                <h2>Recently played</h2>
+                <div class="flexer wrap text-center">
+                    <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/metal_lifting.jpg" alt="strangers">
                         </div>
-                        <ul>
-                            <li><a href="">Nome Playlist</a></li>
-                            <li><a href="">Nome Playlist</a></li>
-                            <li><a href="">Nome Playlist</a></li>
-                            <li><a href="">Nome Playlist</a></li>
-                            <li><a href="">Nome Playlist</a></li>
-                            <li><a href="">Nome Playlist</a></li>
-                            <li><a href="">Nome Playlist</a></li>
-                        </ul>
+                        <div class="caption">
+                            <h3>Heavy Metal</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/stranger.jpeg" alt="strangers">
+                        </div>
+                        <div class="caption">
+                            <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                            <p>Kyle Dixon & Michael Stein</p>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/aquietplace.jpeg" alt="strangers">
+                        </div>
+                        <div class="caption">
+                            <h3>A quiet place</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/split.jpeg" alt="strangers">
+                        </div>
+                        <div class="caption">
+                            <h3>Split</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/cure.jpeg" alt="strangers">
+                        </div>
+                        <div class="caption">
+                            <h3>A cure for wellness</h3>
+                            <p>Subtitle</p>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/sinister.jpeg" alt="strangers">
+                        </div>
+                        <div class="caption">
+                            <h3>Sinister</h3>
+                            <p>Subtitle</p>
+                        </div>
                     </div>
                 </div>
-                <!-- End Playlist -->
 
-                <div class="install">
-                    <img src="img/download.svg" alt="">
-                    <span class="xs-hidden">Installa app</span>
+            </section>
+            <!-- END Main>Recents -->
+
+            <!-- Main>created -->
+
+            <section class="created">
+                <h2>Creato per John Doe</h2>
+                <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                <div class="flexer wrap text-center">
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/radar.jpeg" alt="release radar">
+                        </div>
+                        <div class="caption">
+                            <h3>Release Radar</h3>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/mixdaily.jpeg" alt="daily mix">
+                        </div>
+                        <div class="caption">
+                            <h3>Daily Mix 1</h3>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <!-- END Main>Created -->
 
-                <div class="user">
-                    <img src="img/profile.svg" alt="user icon" class="user-icon rounded">
-                    <a href="" class="user-area xs-hidden">John Doe</a>
+            <!-- Main>Most_Popular -->
+            <section class="most_popular">
+                <h2>Artisti più popolari</h2>
+                <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                <div class="flexer wrap text-center">
+                    <div class="recent-playlist">
+                        <div class="cover-container rounded">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/youg.jpeg" alt="Lana Del Rey">
+                        </div>
+                        <div class="caption">
+                            <h3>Lana Del Rey</h3>
+                        </div>
+                    </div>
+                    <div class="recent-playlist">
+                        <div class="cover-container rounded">
+                            <div class="layover">
+                                <div class="layover-content">
+                                    <a href="">
+                                        <i class="far fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                        </div>
+                        <div class="caption">
+                            <h3>Ludovico Einaudi</h3>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-            <div class="main-content lr-padder">
+            </section>
+            <!-- END Main>Most_Popular -->
 
-                <!-- Main>header -->
-                <header class="text-center">
-                    <ul class="list-inline upper">
-                        <li class="focused"><a href=""></a>In evidenza</li>
-                        <li><a href=""></a>Podcast</li>
-                        <li><a href=""></a>Classifiche</li>
-                        <li><a href=""></a>Generi e Mahmood</li>
-                        <li><a href=""></a>Nuove uscite</li>
-                        <li><a href=""></a>Scopri</li>
-                    </ul>
+        </div>
+    </main>
 
-                </header>
-                <!-- END Main>header -->
-
-                <!-- Main>Recents -->
-                <section class="recents">
-                    <h2>Recently played</h2>
-                    <div class="flexer wrap text-center">
-                        <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/metal_lifting.jpg" alt="strangers">
-                            </div>
-                            <div class="caption">
-                                <h3>Heavy Metal</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/stranger.jpeg" alt="strangers">
-                            </div>
-                            <div class="caption">
-                                <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
-                                <p>Kyle Dixon & Michael Stein</p>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/aquietplace.jpeg" alt="strangers">
-                            </div>
-                            <div class="caption">
-                                <h3>A quiet place</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/split.jpeg" alt="strangers">
-                            </div>
-                            <div class="caption">
-                                <h3>Split</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/cure.jpeg" alt="strangers">
-                            </div>
-                            <div class="caption">
-                                <h3>A cure for wellness</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/sinister.jpeg" alt="strangers">
-                            </div>
-                            <div class="caption">
-                                <h3>Sinister</h3>
-                                <p>Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-                <!-- END Main>Recents -->
-
-                <!-- Main>created -->
-
-                <section class="created">
-                    <h2>Creato per John Doe</h2>
-                    <p>Più ascolti, più accurati saranno i suggerimenti</p>
-                    <div class="flexer wrap text-center">
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/radar.jpeg" alt="release radar">
-                            </div>
-                            <div class="caption">
-                                <h3>Release Radar</h3>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/mixdaily.jpeg" alt="daily mix">
-                            </div>
-                            <div class="caption">
-                                <h3>Daily Mix 1</h3>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- END Main>Created -->
-
-                <!-- Main>Most_Popular -->
-                <section class="most_popular">
-                    <h2>Artisti più popolari</h2>
-                    <p>Più ascolti, più accurati saranno i suggerimenti</p>
-                    <div class="flexer wrap text-center">
-                        <div class="recent-playlist">
-                            <div class="cover-container rounded">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/youg.jpeg" alt="Lana Del Rey">
-                            </div>
-                            <div class="caption">
-                                <h3>Lana Del Rey</h3>
-                            </div>
-                        </div>
-                        <div class="recent-playlist">
-                            <div class="cover-container rounded">
-                                <div class="layover">
-                                    <div class="layover-content">
-                                        <a href="">
-                                            <i class="far fa-play-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
-                            </div>
-                            <div class="caption">
-                                <h3>Ludovico Einaudi</h3>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- END Main>Most_Popular -->
-
+    <footer class="flexer between center-cross lr-padder">
+        <!-- FOOTER==>LEFT_COL -->
+        <div class="side-content flexer center-cross">
+            <img src="img/sinister.jpeg" alt="sinister cover">
+            <div class="captions">
+                <h4>Sinister</h4>
+                <p>Brano nome</p>
             </div>
-        </main>
-
-        <!-- FOOTER -->
-
-        <footer class="flexer between center-cross lr-padder">
-            <!-- FOOTER==>LEFT_COL -->
-            <div class="side-content flexer center-cross">
-                <img src="img/sinister.jpeg" alt="sinister cover">
-                <div class="captions">
-                    <h4>Sinister</h4>
-                    <p>Brano nome</p>
-                </div>
-                <div>
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-folder"></i>
-                </div>
+            <div>
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
             </div>
-            <!-- END FOOTER==>LEFT_COL -->
+        </div>
+        <!-- END FOOTER==>LEFT_COL -->
 
-            <!-- FOOTER==>PLAYER -->
-            <div class="song-player text-center">
-                <!-- BUTTONS -->
-                <div class="player-buttons">
-                    <a href="#">
-                        <i class="fas fa-random"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-step-backward"></i>
-                    </a>
-                    <a href="#">
-                        <i class="far fa-play-circle"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-step-forward"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-redo-alt"></i>
-                    </a>
-                </div>
-                <!-- END BUTTONS -->
-
-                <!-- BAR -->
-                <div class="song-bar">
-                    <span>0:25</span>
-                    <div class="rounded-bar">
-                        <div class="progress-status">
-                            <span class="pointer"></span>
-                        </div>
-                    </div>
-                    <span>4:35</span>
-                </div>
-                <!-- END BAR -->
+        <!-- FOOTER==>PLAYER -->
+        <div class="song-player text-center">
+            <!-- BUTTONS -->
+            <div class="player-buttons">
+                <a href="#">
+                    <i class="fas fa-random"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-step-backward"></i>
+                </a>
+                <a href="#">
+                    <i class="far fa-play-circle"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-step-forward"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-redo-alt"></i>
+                </a>
             </div>
-            <!-- END FOOTER==>PLAYER -->
+            <!-- END BUTTONS -->
 
-            <div class="side-content flexer center-cross end">
-                <a href=""><i class="fas fa-bars"></i></a>
-                <a href=""><i class="fas fa-desktop"></i></a>
-                <a href=""><i class="fas fa-volume-up"></i></a>
+            <!-- BAR -->
+            <div class="song-bar">
+                <span>0:25</span>
                 <div class="rounded-bar">
                     <div class="progress-status">
                         <span class="pointer"></span>
                     </div>
                 </div>
-
+                <span>4:35</span>
             </div>
-        </footer>
-        <!-- END FOOTER -->
-    </div>
+            <!-- END BAR -->
+        </div>
+        <!-- END FOOTER==>PLAYER -->
+
+        <div class="side-content flexer center-cross end">
+            <a href=""><i class="fas fa-bars"></i></a>
+            <a href=""><i class="fas fa-desktop"></i></a>
+            <a href=""><i class="fas fa-volume-up"></i></a>
+            <div class="rounded-bar">
+                <div class="progress-status">
+                    <span class="pointer"></span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
