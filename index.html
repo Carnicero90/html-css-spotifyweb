@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/my_frame.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/my_frame.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Spotify</title>
 </head>
 
@@ -20,9 +20,8 @@
     </header>
     <!-- END HEADER -->
 
-    <main class="flexer">
-        <nav class="lr-padder flexer col">
-
+    <div id="app-wrapper" class="flexer">
+        <nav class="main-nav lr-padder flexer col">
             <!-- Logo-container -->
             <div class="logo-container">
                 <img src="img/logo.svg" alt="spotify logo" class="xs-hidden logo">
@@ -32,7 +31,7 @@
 
             <!-- Navigation -->
             <ul class="navigation">
-                <li class="focused">
+                <li class="focused lr-padder-reset-left">
                     <a href="#">
                         <img src="img/home.svg" alt="home">
                         <span class="xs-hidden">Home</span>
@@ -62,48 +61,48 @@
                 </div>
             </div>
             <ul class="playlist-list xs-hidden">
-                <li><a href="">Nome Playlist</a></li>
-                <li><a href="">Nome Playlist</a></li>
-                <li><a href="">Nome Playlist</a></li>
-                <li><a href="">Nome Playlist</a></li>
-                <li><a href="">Nome Playlist</a></li>
-                <li><a href="">Nome Playlist</a></li>
-                <li><a href="">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
             </ul>
             <!-- End Playlist -->
 
             <div class="install">
                 <img src="img/download.svg" alt="">
-                <span class="xs-hidden">Installa app</span>
+                <a href="#" class="xs-hidden">Installa app</a>
             </div>
 
             <div class="user">
                 <img src="img/profile.svg" alt="user icon" class="user-icon rounded">
-                <a href="" class="user-area xs-hidden">John Doe</a>
+                <a href="#" class="user-area xs-hidden">John Doe</a>
             </div>
         </nav>
-        <div class="main-content lr-padder">
 
+
+        <main class="lr-padder">
             <!-- Main>header -->
             <header class="text-center">
                 <ul class="list-inline upper">
-                    <li class="focused"><a href=""></a>In evidenza</li>
-                    <li><a href=""></a>Podcast</li>
-                    <li><a href=""></a>Classifiche</li>
-                    <li><a href=""></a>Generi e Mahmood</li>
-                    <li><a href=""></a>Nuove uscite</li>
-                    <li><a href=""></a>Scopri</li>
+                    <li class="focused"><a href="">In evidenza</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Classifiche</a></li>
+                    <li><a href="#">Generi e Mahmood</a></li>
+                    <li><a href="#">Nuove uscite</a></li>
+                    <li><a href="#">Scopri</a></li>
                 </ul>
 
             </header>
             <!-- END Main>header -->
 
             <!-- Main>Recents -->
-            <section class="recents">
+            <section class="recents lr-padder-reset-right">
                 <h2>Recently played</h2>
-                <div class="flexer wrap text-center">
-                    <!-- anche possibile  usare ul e dare flex a ul stessa, magari? -->
-                    <div class="recent-playlist">
+                <ul class="flexer wrap text-center">
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
@@ -118,8 +117,8 @@
                             <h3>Heavy Metal</h3>
                             <p>Subtitle</p>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
@@ -134,8 +133,8 @@
                             <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
                             <p>Kyle Dixon & Michael Stein</p>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
@@ -150,12 +149,12 @@
                             <h3>A quiet place</h3>
                             <p>Subtitle</p>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
-                                    <a href="">
+                                    <a href="#">
                                         <i class="far fa-play-circle"></i>
                                     </a>
                                 </div>
@@ -166,12 +165,12 @@
                             <h3>Split</h3>
                             <p>Subtitle</p>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
-                                    <a href="">
+                                    <a href="#">
                                         <i class="far fa-play-circle"></i>
                                     </a>
                                 </div>
@@ -182,12 +181,12 @@
                             <h3>A cure for wellness</h3>
                             <p>Subtitle</p>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
-                                    <a href="">
+                                    <a href="#">
                                         <i class="far fa-play-circle"></i>
                                     </a>
                                 </div>
@@ -198,23 +197,21 @@
                             <h3>Sinister</h3>
                             <p>Subtitle</p>
                         </div>
-                    </div>
-                </div>
-
+                    </li>
+                </ul>
             </section>
             <!-- END Main>Recents -->
 
             <!-- Main>created -->
-
             <section class="created">
                 <h2>Creato per John Doe</h2>
                 <p>Più ascolti, più accurati saranno i suggerimenti</p>
-                <div class="flexer wrap text-center">
-                    <div class="recent-playlist">
+                <ul class="flexer wrap text-center">
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
-                                    <a href="">
+                                    <a href="#">
                                         <i class="far fa-play-circle"></i>
                                     </a>
                                 </div>
@@ -224,12 +221,12 @@
                         <div class="caption">
                             <h3>Release Radar</h3>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container">
                             <div class="layover">
                                 <div class="layover-content">
-                                    <a href="">
+                                    <a href="#">
                                         <i class="far fa-play-circle"></i>
                                     </a>
                                 </div>
@@ -239,8 +236,8 @@
                         <div class="caption">
                             <h3>Daily Mix 1</h3>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </section>
             <!-- END Main>Created -->
 
@@ -248,8 +245,8 @@
             <section class="most_popular">
                 <h2>Artisti più popolari</h2>
                 <p>Più ascolti, più accurati saranno i suggerimenti</p>
-                <div class="flexer wrap text-center">
-                    <div class="recent-playlist">
+                <ul class="flexer wrap text-center">
+                    <li class="recent-playlist">
                         <div class="cover-container rounded">
                             <div class="layover">
                                 <div class="layover-content">
@@ -263,8 +260,8 @@
                         <div class="caption">
                             <h3>Lana Del Rey</h3>
                         </div>
-                    </div>
-                    <div class="recent-playlist">
+                    </li>
+                    <li class="recent-playlist">
                         <div class="cover-container rounded">
                             <div class="layover">
                                 <div class="layover-content">
@@ -278,25 +275,29 @@
                         <div class="caption">
                             <h3>Ludovico Einaudi</h3>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </section>
             <!-- END Main>Most_Popular -->
 
-        </div>
-    </main>
+        </main>
+    </div>
 
     <footer class="flexer between center-cross lr-padder">
         <!-- FOOTER==>LEFT_COL -->
         <div class="side-content flexer center-cross">
             <img src="img/sinister.jpeg" alt="sinister cover">
-            <div class="captions">
+            <div class="caption">
                 <h4>Sinister</h4>
                 <p>Brano nome</p>
             </div>
             <div>
-                <i class="far fa-heart"></i>
-                <i class="far fa-folder"></i>
+                <a href="">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="">
+                    <i class="far fa-folder"></i>
+                </a>
             </div>
         </div>
         <!-- END FOOTER==>LEFT_COL -->
@@ -337,6 +338,7 @@
         </div>
         <!-- END FOOTER==>PLAYER -->
 
+        <!-- FOOTER==>RIGHT_COL -->
         <div class="side-content flexer center-cross end">
             <a href=""><i class="fas fa-bars"></i></a>
             <a href=""><i class="fas fa-desktop"></i></a>
@@ -346,9 +348,10 @@
                     <span class="pointer"></span>
                 </div>
             </div>
-
         </div>
+        <!-- END FOOTER==>RIGHT_COL -->
     </footer>
+    <!-- END FOOTER -->
 </body>
 
 </html>

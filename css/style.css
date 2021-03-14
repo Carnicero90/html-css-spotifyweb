@@ -2,16 +2,8 @@
     display: none;
 }
 
-/* COMMON */
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-stretch: semi-condensed;
-    font-weight: 600;
-    color: #a3a3a3;
-    font-size: 0.8rem;
-}
-
-/* COMMON text-color */
+/* common text-color/font-properties
+   ================================= */
 a:hover,
 nav .focused,
 body>header,
@@ -29,6 +21,13 @@ h4,
     font-weight: 800;
 }
 
+.big-button:hover,
+.main-content>header li:hover {
+    font-size: 130%;
+}
+
+/*  ================================= */
+
 h2,
 h3,
 p {
@@ -39,41 +38,80 @@ p {
     padding-top: 10px;
 }
 
-.big-button {
-    margin-top: 20px;
-}
-
+/* padding left-right wrapper & resets
+   =================================== */
 
 .lr-padder {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.big-button:hover,
-.main-content>header li:hover {
-    font-size: 130%;
+.lr-padder-reset-left {
+    margin-left: -15px;
 }
 
-main {
+.lr-padder-reset-right {
+    margin-right: -15px;
+}
+
+/* =================================== */
+
+/* macrolayout elements 
+   ==================== */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-stretch: semi-condensed;
+    font-weight: 600;
+    color: #a3a3a3;
+    font-size: 0.8rem;
+}
+
+.fixed-header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 220px);
+    height: 80px;
+    background-color: #080b12;
+    opacity: 0.8;
+    padding: 30px 25px;
+}
+
+#app-wrapper {
     height: calc(100vh - 100px);
     overflow: hidden;
 }
 
-/* NAV */
-
-nav {
+.main-nav {
     background: #000000;
     width: 220px;
     flex-shrink: 0;
 }
 
-nav .focused {
+main {
+    padding-top: 90px;
+    background-color: #141922;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #282828;
+    height: 100px;
+}
+
+/* ==================== */
+
+/* MAIN-NAV
+   ======== */
+
+.main-nav .focused {
     position: relative;
-    margin-left: -15px;
     padding-left: 15px;
 }
 
-nav .focused::before {
+.main-nav .focused::before {
     content: "";
     border-right: 3px solid #adff2f;
     height: 2.6em;
@@ -126,7 +164,6 @@ nav li,
     padding: 0.5rem;
     background-color: grey;
     color: black;
-    margin-right: 0.4rem;
 }
 
 .user,
@@ -135,48 +172,32 @@ nav li,
     padding-bottom: 10px;
 }
 
-/* END NAV */
+/* ======== */
 
-/* FIXED */
-body>header {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: calc(100% - 220px);
-    height: 80px;
-    background-color: #080b12;
-    opacity: 0.8;
-    padding: 30px 25px;
-}
+/* FIXED
+   ===== */
 
 .big-button {
     border: 1px solid;
-    padding: 15px 8%;
+    padding: 15px 6%;
     border-radius: 20px;
 }
 
-/* END FIXED */
+/* ===== */
 
-/* MAIN */
+/* MAIN-CONTENT
+   ============ */
 
-.main-content {
-    padding-top: 90px;
-    background-color: #141922;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-.main-content>* {
+main>* {
     padding-bottom: 40px;
 }
 
 /* Main>header */
-.main-content>header li {
+main>header li {
     padding: 10px 10px;
 }
 
-.main-content>header li.focused::after {
+main>header li.focused::after {
     content: "";
     border-bottom: 3px solid yellowgreen;
     display: block;
@@ -190,12 +211,7 @@ body>header {
     padding-right: 15px;
 }
 
-/* devo resettare padding right di 15px a sto giro */
-.recents {
-    margin-right: -15px;
-}
-
-.main-content .cover-container {
+main .cover-container {
     position: relative;
     overflow: hidden;
 }
@@ -223,14 +239,10 @@ body>header {
     cursor: pointer;
 }
 
-/* FOOTER */
+/* ============ */
 
-footer {
-    background-color: #282828;
-    height: 100px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
+/* FOOTER
+   ====== */
 
 footer * {
     vertical-align: middle;
@@ -250,7 +262,7 @@ footer img {
     padding-right: 8px;
 }
 
-footer .captions {
+footer .caption {
     padding-right: 10%;
 }
 
@@ -319,6 +331,9 @@ footer i {
     padding-right: 5px;
 }
 
+/* ====== */
+
+
 /* QUERIES
    ======================================================= */
 
@@ -350,7 +365,7 @@ footer i {
         width: calc(100% - 60px);
     }
 
-    nav {
+    .main-nav {
         width: 60px;
         align-items: center;
     }
@@ -420,7 +435,7 @@ footer i {
         position: relative;
     }
 
-    .side-content .captions * {
+    .side-content .caption * {
         display: inline;
     }
 
@@ -429,7 +444,7 @@ footer i {
         padding-left: 5px;
     }
 
-    .side-content .captions {
+    .side-content .caption {
         display: block;
         position: absolute;
         top: -1030px;
