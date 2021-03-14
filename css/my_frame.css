@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* RESETS */
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -40,26 +48,44 @@ img {
 }
 
 .flexer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .flexer.wrap {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .flexer.col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
+.flexer.center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
 .flexer.end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
 .flexer.between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .flexer.center-cross {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -85,18 +111,3 @@ img {
 .rounded {
     border-radius: 50%;
 }
-
-/* APPUNTI TEST */
-
-/* paddings bottom: h2,
-h3 15px 
-p 10px 
-nav .navigation li,
-nav .playlist li,
-.create-playlist,
-.playlist h2 20px
-.user .install 10px
-.main-content>*40px
-h2~p {
-    padding-bottom: 15px;
-} */
