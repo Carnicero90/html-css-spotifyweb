@@ -73,6 +73,7 @@ body {
     font-weight: 600;
     color: #a3a3a3;
     font-size: 0.8rem;
+    min-width: 200px;
 }
 
 .fixed-banner {
@@ -398,7 +399,24 @@ footer i {
         overflow-y: hidden;
     }
 
-    body>header {
+    main {
+        padding-top: 20px;
+    }
+
+    nav *:not([class*="logo"]) {
+        display: none;
+    }
+
+    .main-nav::after {
+        content: "\f0c9";
+        font-family: "Font Awesome 5 Free";
+        display: block;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 200%
+    }
+
+    header {
         padding: 35px 0;
     }
 
@@ -460,8 +478,9 @@ footer i {
     .side-content .caption {
         display: block;
         position: absolute;
-        top: -1030px;
+        top: -1045px;
         width: 200px;
         left: 50%;
     }
+
 }
