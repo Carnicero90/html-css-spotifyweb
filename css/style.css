@@ -15,7 +15,8 @@ a:hover,
 nav .focused,
 body>header,
 .layover-content,
-.song-player {
+.song-player,
+.side-content.right {
     color: white;
 }
 
