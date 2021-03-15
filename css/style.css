@@ -367,7 +367,7 @@ footer i {
         display: initial;
     }
 
-    body>header {
+    .fixed-header {
         width: calc(100% - 60px);
     }
 
