@@ -75,7 +75,7 @@ body {
     font-size: 0.8rem;
 }
 
-.fixed-header {
+.fixed-banner {
     z-index: 1;
     position: fixed;
     top: 0;
@@ -137,7 +137,7 @@ footer {
 }
 
 /* Nav imgs&icons */
-nav img:not([class*="logo"]) {
+.main-nav img:not([class*="logo"]) {
     width: 2rem;
     vertical-align: middle;
 }
@@ -159,7 +159,7 @@ nav img:not([class*="logo"]) {
     height: 2rem;
 }
 
-nav li,
+.main-nav li,
 .create-playlist,
 .playlist h2 {
     padding-bottom: 20px;
@@ -367,7 +367,7 @@ footer i {
         display: initial;
     }
 
-    .fixed-header {
+    .fixed-banner {
         width: calc(100% - 60px);
     }
 
